@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:groceries/pages/signin_page.dart';
 import 'package:groceries/theme.dart';
 
 class OnBoardingPage extends StatelessWidget {
@@ -15,6 +16,20 @@ class OnBoardingPage extends StatelessWidget {
               width: double.infinity,
               height: double.infinity,
               fit: BoxFit.cover,
+            ),
+            Container(
+              width: double.infinity,
+              height: double.infinity,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.bottomCenter,
+                  end: Alignment.center,
+                  colors: [
+                    darkColor.withOpacity(0.6),
+                    Colors.transparent,
+                  ],
+                ),
+              ),
             ),
             Center(
               child: Column(
@@ -53,7 +68,16 @@ class OnBoardingPage extends StatelessWidget {
                     width: MediaQuery.of(context).size.width - (2 * 30.5),
                     height: 50,
                     child: FlatButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return SigninPage();
+                            },
+                          ),
+                        );
+                      },
                       color: greenColor,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(19),
@@ -71,20 +95,6 @@ class OnBoardingPage extends StatelessWidget {
                     height: 90,
                   ),
                 ],
-              ),
-            ),
-            Container(
-              width: double.infinity,
-              height: double.infinity,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.bottomCenter,
-                  end: Alignment.center,
-                  colors: [
-                    darkColor.withOpacity(0.6),
-                    Colors.transparent,
-                  ],
-                ),
               ),
             ),
           ],
