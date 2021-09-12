@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:groceries/pages/number_page.dart';
 import 'package:groceries/theme.dart';
 
 class SigninPage extends StatelessWidget {
@@ -75,7 +76,16 @@ class SigninPage extends StatelessWidget {
                     height: 50,
                     width: double.infinity,
                     child: FlatButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return NumberPage();
+                            },
+                          ),
+                        );
+                      },
                       color: blueColor,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
