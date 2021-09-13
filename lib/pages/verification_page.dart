@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:groceries/pages/select_location_page.dart';
 import 'package:groceries/theme.dart';
 
 class VerificationPage extends StatelessWidget {
@@ -7,7 +8,16 @@ class VerificationPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: backgroundColor,
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) {
+                return SelectLocationPage();
+              },
+            ),
+          );
+        },
         backgroundColor: greenColor,
         child: Icon(Icons.chevron_right),
       ),
