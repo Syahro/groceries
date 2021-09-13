@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:groceries/pages/login_page.dart';
 import 'package:groceries/theme.dart';
 
 class SelectLocationPage extends StatelessWidget {
@@ -125,7 +126,16 @@ class SelectLocationPage extends StatelessWidget {
                 height: 50,
                 width: double.infinity,
                 child: FlatButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return LoginPage();
+                        },
+                      ),
+                    );
+                  },
                   color: greenColor,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15),
