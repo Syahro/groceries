@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:groceries/pages/signup_page.dart';
 import 'package:groceries/theme.dart';
 
 class LoginPage extends StatelessWidget {
@@ -25,7 +26,7 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 80,
+                height: 60,
               ),
               Text(
                 'Loging',
@@ -118,7 +119,7 @@ class LoginPage extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: 30,
+                height: 25,
               ),
               Container(
                 width: double.infinity,
@@ -138,6 +139,40 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
               ),
+              SizedBox(
+                height: 10,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Don’t have an account? ',
+                    style: normalTextStyle.copyWith(
+                      fontSize: 12,
+                      color: darkColor,
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return SignupPage();
+                          },
+                        ),
+                      );
+                    },
+                    child: Text(
+                      'Singup',
+                      style: normalTextStyle.copyWith(
+                        fontSize: 12,
+                        color: greenColor,
+                      ),
+                    ),
+                  ),
+                ],
+              )
             ],
           ),
         ),
