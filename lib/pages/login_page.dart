@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:groceries/pages/home_page.dart';
 import 'package:groceries/pages/signup_page.dart';
 import 'package:groceries/theme.dart';
 
@@ -125,7 +126,14 @@ class LoginPage extends StatelessWidget {
                 width: double.infinity,
                 height: 55,
                 child: FlatButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {},
+                      ),
+                    );
+                  },
                   color: greenColor,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15),
