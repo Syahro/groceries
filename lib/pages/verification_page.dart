@@ -1,28 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:groceries/pages/verification_page.dart';
 import 'package:groceries/theme.dart';
 
-class NumberPage extends StatelessWidget {
+class VerificationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: backgroundColor,
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) {
-                return VerificationPage();
-              },
-            ),
-          );
-        },
+        onPressed: () {},
         backgroundColor: greenColor,
-        child: Icon(
-          Icons.chevron_right,
-          color: whiteColor,
-        ),
+        child: Icon(Icons.chevron_right),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       body: SafeArea(
@@ -38,6 +25,7 @@ class NumberPage extends StatelessWidget {
                 children: [
                   Icon(
                     Icons.chevron_left,
+                    color: darkColor,
                   ),
                 ],
               ),
@@ -45,8 +33,8 @@ class NumberPage extends StatelessWidget {
                 height: 65,
               ),
               Text(
-                'Enter your mobile number',
-                style: semiBoldTextStyle.copyWith(
+                'Enter your 4-digit code',
+                style: boldTextStyle.copyWith(
                   fontSize: 20,
                   color: darkColor,
                 ),
@@ -55,10 +43,10 @@ class NumberPage extends StatelessWidget {
                 height: 27,
               ),
               Text(
-                'Mobile Number',
+                'Code',
                 style: normalTextStyle.copyWith(
                   fontSize: 16,
-                  color: darkColor.withOpacity(0.8),
+                  color: darkColor.withOpacity(0.7),
                 ),
               ),
               SizedBox(
@@ -66,25 +54,38 @@ class NumberPage extends StatelessWidget {
               ),
               Row(
                 children: [
-                  Image.asset(
-                    'assets/nation.png',
-                    width: 30,
-                    height: 20,
+                  Container(
+                    height: 15,
+                    width: 1,
+                    color: darkColor.withOpacity(0.5),
                   ),
                   SizedBox(
-                    width: 15,
+                    width: 3,
                   ),
                   Text(
-                    '+880',
-                    style: mediumTextStyle.copyWith(
-                        fontSize: 18, color: darkColor),
+                    '- - - -',
+                    style: normalTextStyle.copyWith(
+                      fontSize: 18,
+                      color: darkColor,
+                    ),
+                  ),
+                ],
+              ),
+              Spacer(),
+              Row(
+                children: [
+                  Text(
+                    'Resend Code',
+                    style: normalTextStyle.copyWith(
+                      fontSize: 16,
+                      color: greenColor,
+                    ),
                   ),
                 ],
               ),
               SizedBox(
-                height: 5,
+                height: 35,
               ),
-              Divider(),
             ],
           ),
         ),
