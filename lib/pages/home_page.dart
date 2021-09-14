@@ -1,13 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:groceries/theme.dart';
+import 'package:groceries/widget/bottom_navbar.dart';
 import 'package:groceries/widget/groceries_card.dart';
 import 'package:groceries/widget/item_card.dart';
+
+import 'explore_page.dart';
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: backgroundColor,
+      floatingActionButton: BottomNavbar(
+        isStore: true,
+        isExplore: false,
+        isCart: false,
+        isFavorite: false,
+        isAccount: false,
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: SafeArea(
         child: ListView(
           children: [
@@ -310,7 +321,7 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 50,
+                    height: 80,
                   ),
                 ],
               ),
