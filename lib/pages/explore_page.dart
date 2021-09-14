@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:groceries/pages/baverages_page.dart';
+import 'package:groceries/pages/search_page.dart';
 import 'package:groceries/theme.dart';
 import 'package:groceries/widget/bottom_navbar.dart';
 import 'package:groceries/widget/explore_card.dart';
@@ -38,32 +39,44 @@ class ExplorePage extends StatelessWidget {
                   SizedBox(
                     height: 20,
                   ),
-                  Container(
-                    height: 50,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      color: lightGreyColor,
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 15),
-                      child: Row(
-                        children: [
-                          Icon(
-                            Icons.search,
-                            color: darkGreyColor,
-                          ),
-                          SizedBox(
-                            width: 8,
-                          ),
-                          Text(
-                            'Search Store',
-                            style: normalTextStyle.copyWith(
-                              fontSize: 13,
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return SearchPage();
+                          },
+                        ),
+                      );
+                    },
+                    child: Container(
+                      height: 50,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        color: lightGreyColor,
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 15),
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.search,
                               color: darkGreyColor,
                             ),
-                          ),
-                        ],
+                            SizedBox(
+                              width: 8,
+                            ),
+                            Text(
+                              'Search Store',
+                              style: normalTextStyle.copyWith(
+                                fontSize: 13,
+                                color: darkGreyColor,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),

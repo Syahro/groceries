@@ -8,7 +8,12 @@ class BaveragesCard extends StatelessWidget {
   final String description;
   final String price;
 
-  BaveragesCard(this.imageurl, this.title, this.description, this.price);
+  BaveragesCard({
+    this.imageurl,
+    this.title,
+    this.description,
+    this.price,
+  });
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -33,7 +38,7 @@ class BaveragesCard extends StatelessWidget {
               height: 20,
             ),
             Text(
-             title,
+              title,
               style: semiBoldTextStyle.copyWith(
                 fontSize: 16,
                 color: darkColor,

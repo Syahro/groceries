@@ -39,9 +39,15 @@ class BaveragesPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       BaveragesCard(
-                          'coke.png', 'Diet Coke', '355ml, Price', '1.99'),
+                          imageurl: 'coke.png',
+                          title: 'Diet Coke',
+                          description: '355ml, Price',
+                          price: '1.99'),
                       BaveragesCard(
-                          'sprite.png', 'Sprite Can', '325ml, Price', '1.50'),
+                          imageurl: 'sprite.png',
+                          title: 'Sprite Can',
+                          description: '325ml, Price',
+                          price: '1.50'),
                     ],
                   ),
                   SizedBox(
@@ -50,10 +56,16 @@ class BaveragesPage extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      BaveragesCard('apple_juice.png', 'Apple & Grape\nJuice',
-                          '2L, Price', '15.99'),
-                      BaveragesCard('orange_juice.png', 'Orange Juice',
-                          '2L, Price', '15.50'),
+                      BaveragesCard(
+                          imageurl: 'apple_juice.png',
+                          title: 'Apple & Grape\nJuice',
+                          description: '2L, Price',
+                          price: '15.99'),
+                      BaveragesCard(
+                          imageurl: 'orange_juice.png',
+                          title: 'Orange Juice',
+                          description: '2L, Price',
+                          price: '15.50'),
                     ],
                   ),
                   SizedBox(
@@ -62,10 +74,16 @@ class BaveragesPage extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      BaveragesCard('cocacola.png', 'Coca Cola Can',
-                          '325ml, Price', '4.99'),
                       BaveragesCard(
-                          'pepsi.png', 'Pepsi Can', '330ml, Price', '4.99'),
+                          imageurl: 'cocacola.png',
+                          title: 'Coca Cola Can',
+                          description: '325ml, Price',
+                          price: '4.99'),
+                      BaveragesCard(
+                          imageurl: 'pepsi.png',
+                          title: 'Pepsi Can',
+                          description: '330ml, Price',
+                          price: '4.99'),
                     ],
                   ),
                   SizedBox(
