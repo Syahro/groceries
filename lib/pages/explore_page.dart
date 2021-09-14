@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:groceries/pages/baverages_page.dart';
 import 'package:groceries/theme.dart';
 import 'package:groceries/widget/bottom_navbar.dart';
 import 'package:groceries/widget/explore_card.dart';
@@ -113,10 +114,22 @@ class ExplorePage extends StatelessWidget {
                         'Dairy & Eggs',
                         semiYelowColor,
                       ),
-                      ExploreCard(
-                        'baverage.png',
-                        'Beverages',
-                        semiGreenColor,
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return BaveragesPage();
+                              },
+                            ),
+                          );
+                        },
+                        child: ExploreCard(
+                          'baverage.png',
+                          'Beverages',
+                          semiGreenColor,
+                        ),
                       ),
                     ],
                   ),
