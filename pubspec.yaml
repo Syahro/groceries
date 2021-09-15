@@ -30,6 +30,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_native_splash: ^1.2.3
   modal_bottom_sheet: ^2.0.0
+  custom_dialog: ^0.0.2
 
 dev_dependencies:
   flutter_test:

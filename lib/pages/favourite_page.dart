@@ -15,26 +15,117 @@ class FavouritePage extends StatelessWidget {
         isFavorite: true,
         isAccount: false,
       ),
-      floatingActionButton: Container(
-        height: 50,
-        width: double.infinity,
-        margin: EdgeInsets.symmetric(horizontal: 25),
-        padding: EdgeInsets.symmetric(horizontal: 14),
-        decoration: BoxDecoration(
-          color: greenColor,
-          borderRadius: BorderRadius.circular(10),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Add All To Cart',
-              style: normalTextStyle.copyWith(
-                fontSize: 18,
-                color: whiteColor,
+      floatingActionButton: InkWell(
+        onTap: () {
+          return showDialog(
+            context: context,
+            builder: (context) => Container(
+              width: double.infinity,
+              padding: EdgeInsets.fromLTRB(25, 70, 25, 40),
+              child: Container(
+                width: double.infinity,
+                padding: EdgeInsets.all(25),
+                decoration: BoxDecoration(
+                  color: whiteColor,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Icon(Icons.close),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 25,
+                    ),
+                    Image.asset(
+                      'assets/failed.png',
+                      width: 222,
+                      height: 222,
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    Text(
+                      'Oops! Order Failed',
+                      style: boldTextStyle.copyWith(
+                        fontSize: 18,
+                        color: darkColor,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      'Something went tembly wrong.',
+                      style: normalTextStyle.copyWith(
+                        fontSize: 12,
+                        color: darkGreyColor.withOpacity(0.7),
+                      ),
+                    ),
+                    Spacer(),
+                    Container(
+                      height: 45,
+                      width: double.infinity,
+                      child: FlatButton(
+                        onPressed: () {},
+                        color: greenColor,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Text(
+                          'Please Try Again',
+                          style: normalTextStyle.copyWith(
+                            fontSize: 16,
+                            color: whiteColor,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      height: 45,
+                      width: double.infinity,
+                      child: TextButton(
+                        onPressed: () {},
+                        child: Text(
+                          'Back to home',
+                          style: semiBoldTextStyle.copyWith(
+                            fontSize: 15,
+                            color: darkColor,
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
-          ],
+          );
+        },
+        child: Container(
+          height: 50,
+          width: double.infinity,
+          margin: EdgeInsets.symmetric(horizontal: 25),
+          padding: EdgeInsets.symmetric(horizontal: 14),
+          decoration: BoxDecoration(
+            color: greenColor,
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Add All To Cart',
+                style: normalTextStyle.copyWith(
+                  fontSize: 18,
+                  color: whiteColor,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
