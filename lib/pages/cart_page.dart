@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:groceries/pages/order_success_page.dart';
 import 'package:groceries/theme.dart';
 import 'package:groceries/widget/bottom_navbar.dart';
 import 'package:groceries/widget/mycart_card.dart';
@@ -228,7 +229,16 @@ class CartPage extends StatelessWidget {
                       height: 50,
                       width: double.infinity,
                       child: FlatButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return OrderSuccessPage();
+                              },
+                            ),
+                          );
+                        },
                         color: greenColor,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(19),
