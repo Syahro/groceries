@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:groceries/pages/filter_page.dart';
 import 'package:groceries/theme.dart';
 import 'package:groceries/widget/baverages_card.dart';
 
@@ -46,10 +47,22 @@ class SearchPage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Image.asset(
-                        'assets/filter.png',
-                        width: 17,
-                        height: 18,
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return Filterpage();
+                              },
+                            ),
+                          );
+                        },
+                        child: Image.asset(
+                          'assets/filter.png',
+                          width: 17,
+                          height: 18,
+                        ),
                       ),
                     ],
                   ),
@@ -80,13 +93,13 @@ class SearchPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       BaveragesCard(
-                        imageurl: 'egg_red.png',
+                        imageurl: 'egg_pasta.png',
                         title: 'Egg Pasta',
                         description: '30gm, Price',
                         price: '15.99',
                       ),
                       BaveragesCard(
-                        imageurl: 'egg_white.png',
+                        imageurl: 'egg_noodle.png',
                         title: 'Egg Noodles',
                         description: '2L, Price',
                         price: '15.99',
@@ -100,13 +113,13 @@ class SearchPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       BaveragesCard(
-                        imageurl: 'egg_red.png',
+                        imageurl: 'mayonaise.png',
                         title: 'Mayonnais Eggless',
                         description: '325ml, Price',
                         price: '4.99',
                       ),
                       BaveragesCard(
-                        imageurl: 'egg_white.png',
+                        imageurl: 'nodle_egg.png',
                         title: 'Egg Noodles',
                         description: '330ml, Price',
                         price: '4.99',
