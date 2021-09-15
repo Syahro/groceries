@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 Color whiteColor = Color(0XFFFFFFFF);
 Color darkColor = Color(0XFF030303);
 Color greenColor = Color(0XFF53B175);
+Color darkGreenColor = Color(0XFF489E67);
 Color orangeColor = Color(0XFFF8A44C);
 Color semiPinkColor = Color(0XFFF7A593);
 Color semiPurpleColor = Color(0XFFD3B0E0);

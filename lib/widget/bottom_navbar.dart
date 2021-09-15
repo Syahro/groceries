@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:groceries/pages/cart_page.dart';
 import 'package:groceries/pages/explore_page.dart';
 import 'package:groceries/pages/home_page.dart';
 import 'package:groceries/theme.dart';
@@ -72,12 +73,24 @@ class BottomNavbar extends StatelessWidget {
                 isActive: isExplore,
               ),
             ),
-            MenuBottomNav(
-              imageUrl: 'cart.png',
-              widthIcon: 21.97,
-              heightIcon: 19.56,
-              title: 'Cart',
-              isActive: isCart,
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return CartPage();
+                    },
+                  ),
+                );
+              },
+              child: MenuBottomNav(
+                imageUrl: 'cart.png',
+                widthIcon: 21.97,
+                heightIcon: 19.56,
+                title: 'Cart',
+                isActive: isCart,
+              ),
             ),
             MenuBottomNav(
               imageUrl: 'favorite.png',
