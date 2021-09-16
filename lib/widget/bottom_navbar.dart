@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:groceries/pages/account_page.dart';
 import 'package:groceries/pages/cart_page.dart';
 import 'package:groceries/pages/explore_page.dart';
 import 'package:groceries/pages/favourite_page.dart';
@@ -112,12 +113,24 @@ class BottomNavbar extends StatelessWidget {
                 isActive: isFavorite,
               ),
             ),
-            MenuBottomNav(
-              imageUrl: 'account.png',
-              widthIcon: 24,
-              heightIcon: 24,
-              title: 'Account',
-              isActive: isAccount,
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return AccountPage();
+                    },
+                  ),
+                );
+              },
+              child: MenuBottomNav(
+                imageUrl: 'account.png',
+                widthIcon: 24,
+                heightIcon: 24,
+                title: 'Account',
+                isActive: isAccount,
+              ),
             ),
           ],
         ),
